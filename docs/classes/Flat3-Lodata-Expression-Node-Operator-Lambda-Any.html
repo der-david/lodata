@@ -85,14 +85,16 @@
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/flat3-lodata.html">Lodata</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/flat3-lodata-expression.html">Expression</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/flat3-lodata-expression-node.html">Node</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/flat3-lodata-expression-node-operator.html">Operator</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/flat3-lodata-expression-node-operator-lambda.html">Lambda</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Field
+    Any
 
         <span class="phpdocumentor-element__extends">
-        extends <a href="classes/Flat3-Lodata-Expression-Node.html"><abbr title="\Flat3\Lodata\Expression\Node">Node</abbr></a>
+        extends <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html"><abbr title="\Flat3\Lodata\Expression\Node\Operator\Lambda">Lambda</abbr></a>
     </span>
     
     
@@ -100,12 +102,12 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Field.php"><a href="files/src-expression-node-field.html"><abbr title="src/Expression/Node/Field.php">Field.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda/Any.php"><a href="files/src-expression-node-operator-lambda-any.html"><abbr title="src/Expression/Node/Operator/Lambda/Any.php">Any.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 </aside>
 
-            <p class="phpdocumentor-summary">Field</p>
+            <p class="phpdocumentor-summary">Class Any</p>
 
     <section class="phpdocumentor-description"></section>
 
@@ -122,7 +124,56 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_operator">operator</a>
+    <span>
+        &nbsp;= null                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_precedence">precedence</a>
+    <span>
+        &nbsp;= 0                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_rightAssociative">rightAssociative</a>
+    <span>
+        &nbsp;= false                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#constant_symbol">symbol</a>
+    <span>
+        &nbsp;= &#039;any&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_unary">unary</a>
+    <span>
+        &nbsp;= false                    </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#property_lambdaArgument">$lambdaArgument</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#property_navigationPath">$navigationPath</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -144,7 +195,7 @@
 <dd>Add an argument to the argument list</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Flat3-Lodata-Expression-Node-Field.html#method_compute">compute()</a>
+    <a href="classes/Flat3-Lodata-Expression-Node.html#method_compute">compute()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
@@ -165,11 +216,25 @@
 <dd>Get the left node</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#method_getPrecedence">getPrecedence()</a>
+    <span>
+                        &nbsp;: int    </span>
+</dt>
+<dd>Return the precedence of the operator</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method_getRightNode">getRightNode()</a>
     <span>
                         &nbsp;: self    </span>
 </dt>
 <dd>Get the right node</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#method_getSymbol">getSymbol()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Return the symbol for this operator</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method_getValue">getValue()</a>
@@ -179,11 +244,39 @@
 <dd>Return the value of this node</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#method_isRightAssociative">isRightAssociative()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Return whether the operator is right-associative</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#method_isUnary">isUnary()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Return whether this operator is unary</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#method_setLambdaArgument">setLambdaArgument()</a>
+    <span>
+                        &nbsp;: self    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method_setLeftNode">setLeftNode()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
 <dd>Set the left node</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#method_setNavigationPath">setNavigationPath()</a>
+    <span>
+                        &nbsp;: self    </span>
+</dt>
+<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method_setRightNode">setRightNode()</a>
@@ -200,6 +293,13 @@
 <dd>Set the value of this node</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Flat3-Lodata-Expression-Operator.html#method_computeCommaSeparatedArguments">computeCommaSeparatedArguments()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Compute the comma separated arguments provided to this operator</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Flat3-Lodata-Expression-Node.html#method_expressionEvent">expressionEvent()</a>
     <span>
                         &nbsp;: void    </span>
@@ -211,13 +311,210 @@
 
 
         
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_operator">
+        operator
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_operator" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">operator</span>
+    = <span class="phpdocumentor-signature__default-value">null</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_precedence">
+        precedence
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_precedence" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">22</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">precedence</span>
+    = <span class="phpdocumentor-signature__default-value">""</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_rightAssociative">
+        rightAssociative
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_rightAssociative" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">20</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">rightAssociative</span>
+    = <span class="phpdocumentor-signature__default-value">false</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_symbol">
+        symbol
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#constant_symbol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda/Any.php"><a href="files/src-expression-node-operator-lambda-any.html"><abbr title="src/Expression/Node/Operator/Lambda/Any.php">Any.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">13</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">symbol</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;any&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_unary">
+        unary
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#constant_unary" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">19</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">unary</span>
+    = <span class="phpdocumentor-signature__default-value">false</span>
+</code>
+
+
+    
+    
+
+</article>
+            </section>
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_lambdaArgument">
+        $lambdaArgument
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#property_lambdaArgument" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda.php"><a href="files/src-expression-node-operator-lambda.html"><abbr title="src/Expression/Node/Operator/Lambda.php">Lambda.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">22</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$lambdaArgument</span>
+    </code>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_navigationPath">
+        $navigationPath
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#property_navigationPath" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda.php"><a href="files/src-expression-node-operator-lambda.html"><abbr title="src/Expression/Node/Operator/Lambda.php">Lambda.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">20</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$navigationPath</span>
+    </code>
+
+    
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Flat3-Lodata-Expression-Node-Field.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -344,23 +641,23 @@
         class="phpdocumentor-element
             -method
             -public
-                                                        "
+                        -abstract                                "
 >
     <h4 class="phpdocumentor-element__name" id="method_compute">
         compute()
-        <a href="classes/Flat3-Lodata-Expression-Node-Field.html#method_compute" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Flat3-Lodata-Expression-Node.html#method_compute" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Field.php"><a href="files/src-expression-node-field.html"><abbr title="src/Expression/Node/Field.php">Field.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node.php"><a href="files/src-expression-node.html"><abbr title="src/Expression/Node.php">Node.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 </aside>
 
         <p class="phpdocumentor-summary">Compute the value of this node</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">compute</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+    <span class="phpdocumentor-signature__abstract">abstract</span>            <span class="phpdocumentor-signature__name">compute</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -446,6 +743,40 @@
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPrecedence">
+        getPrecedence()
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#method_getPrecedence" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return the precedence of the operator</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">getPrecedence</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_getRightNode">
@@ -480,6 +811,40 @@
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSymbol">
+        getSymbol()
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#method_getSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return the symbol for this operator</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">getSymbol</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_getValue">
@@ -505,6 +870,116 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isRightAssociative">
+        isRightAssociative()
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#method_isRightAssociative" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return whether the operator is right-associative</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isRightAssociative</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isUnary">
+        isUnary()
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#method_isUnary" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">56</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return whether this operator is unary</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isUnary</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setLambdaArgument">
+        setLambdaArgument()
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#method_setLambdaArgument" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda.php"><a href="files/src-expression-node-operator-lambda.html"><abbr title="src/Expression/Node/Operator/Lambda.php">Lambda.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">31</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setLambdaArgument</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Flat3-Lodata-Expression-Node-Literal-LambdaArgument.html"><abbr title="\Flat3\Lodata\Expression\Node\Literal\LambdaArgument">LambdaArgument</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Flat3-Lodata-Expression-Node-Literal-LambdaArgument.html"><abbr title="\Flat3\Lodata\Expression\Node\Literal\LambdaArgument">LambdaArgument</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">self</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -550,6 +1025,48 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setNavigationPath">
+        setNavigationPath()
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda.html#method_setNavigationPath" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Node/Operator/Lambda.php"><a href="files/src-expression-node-operator-lambda.html"><abbr title="src/Expression/Node/Operator/Lambda.php">Lambda.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setNavigationPath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Flat3-Lodata-Expression-Node-Literal-NavigationPropertyPath.html"><abbr title="\Flat3\Lodata\Expression\Node\Literal\NavigationPropertyPath">NavigationPropertyPath</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$path</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Flat3-Lodata-Expression-Node-Literal-NavigationPropertyPath.html"><abbr title="\Flat3\Lodata\Expression\Node\Literal\NavigationPropertyPath">NavigationPropertyPath</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">self</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -651,6 +1168,40 @@
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_computeCommaSeparatedArguments">
+        computeCommaSeparatedArguments()
+        <a href="classes/Flat3-Lodata-Expression-Operator.html#method_computeCommaSeparatedArguments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Operator.php"><a href="files/src-expression-operator.html"><abbr title="src/Expression/Operator.php">Operator.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">80</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Compute the comma separated arguments provided to this operator</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">computeCommaSeparatedArguments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_expressionEvent">
         expressionEvent()
         <a href="classes/Flat3-Lodata-Expression-Node.html#method_expressionEvent" class="headerlink"><i class="fas fa-link"></i></a>
@@ -722,7 +1273,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Flat3-Lodata-Expression-Node-Field.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Flat3-Lodata-Expression-Node-Operator-Lambda-Any.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

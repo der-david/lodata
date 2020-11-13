@@ -150,13 +150,6 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_addValidLiteral">addValidLiteral()</a>
-    <span>
-                        &nbsp;: self    </span>
-</dt>
-<dd>Set the list of valid field literals</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Parser-Search.html#method_expressionEvent">expressionEvent()</a>
     <span>
                         &nbsp;: bool|null    </span>
@@ -214,6 +207,13 @@ and should be popped and added to the argument list.</dd>
 <dd>Tokenize a date time offset</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeDeclaredProperty">tokenizeDeclaredProperty()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Tokenize a declared property</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeDoubleQuotedString">tokenizeDoubleQuotedString()</a>
     <span>
                         &nbsp;: bool    </span>
@@ -235,11 +235,18 @@ and should be popped and added to the argument list.</dd>
 <dd>Tokenize a GUID</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeKeyword">tokenizeKeyword()</a>
+    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeLambdaArgument">tokenizeLambdaArgument()</a>
     <span>
                         &nbsp;: bool    </span>
 </dt>
-<dd>Tokenize a registered literal keyword</dd>
+<dd>Tokenize the lambda operator argument</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeLambdaProperty">tokenizeLambdaProperty()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Tokenize a lambda property</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeLeftParen">tokenizeLeftParen()</a>
@@ -247,6 +254,13 @@ and should be popped and added to the argument list.</dd>
                         &nbsp;: bool    </span>
 </dt>
 <dd>When you see a left paren, push it on the operator stack; no other operators can pop a paren (so it’s as if it has the lowest precedence).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeNavigationPropertyPath">tokenizeNavigationPropertyPath()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Tokenize a navigation property path</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeNull">tokenizeNull()</a>
@@ -410,51 +424,6 @@ and should be popped and added to the argument list.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_addValidLiteral">
-        addValidLiteral()
-        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_addValidLiteral" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">82</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Set the list of valid field literals</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">addValidLiteral</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$literal</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$literal</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_expressionEvent">
         expressionEvent()
         <a href="classes/Flat3-Lodata-Expression-Parser-Search.html#method_expressionEvent" class="headerlink"><i class="fas fa-link"></i></a>
@@ -508,7 +477,7 @@ and should be popped and added to the argument list.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">77</span>
 </aside>
 
         <p class="phpdocumentor-summary">Convert an expression to an abstract syntax tree.</p>
@@ -555,7 +524,7 @@ and should be popped and added to the argument list.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the token that was discovered before the current token</p>
@@ -589,7 +558,7 @@ and should be popped and added to the argument list.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">247</span>
 </aside>
 
         <p class="phpdocumentor-summary">Return the node at the top of the operator stack</p>
@@ -623,7 +592,7 @@ and should be popped and added to the argument list.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">417</span>
+    <span class="phpdocumentor-element-found-in__line">420</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a boolean</p>
@@ -657,7 +626,7 @@ and should be popped and added to the argument list.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">256</span>
+    <span class="phpdocumentor-element-found-in__line">259</span>
 </aside>
 
         <p class="phpdocumentor-summary">When a comma is encountered, pop-and-apply operators back to a left paren; the operand on the top of the stack is then the next argument,
@@ -692,7 +661,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">497</span>
+    <span class="phpdocumentor-element-found-in__line">500</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a date</p>
@@ -726,7 +695,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">477</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a date time offset</p>
@@ -753,6 +722,40 @@ and should be popped and added to the argument list.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_tokenizeDeclaredProperty">
+        tokenizeDeclaredProperty()
+        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeDeclaredProperty" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">629</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Tokenize a declared property</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">tokenizeDeclaredProperty</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_tokenizeDoubleQuotedString">
         tokenizeDoubleQuotedString()
         <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeDoubleQuotedString" class="headerlink"><i class="fas fa-link"></i></a>
@@ -760,7 +763,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">457</span>
+    <span class="phpdocumentor-element-found-in__line">460</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a double quoted string</p>
@@ -794,7 +797,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">359</span>
+    <span class="phpdocumentor-element-found-in__line">362</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a duration</p>
@@ -828,7 +831,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">340</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a GUID</p>
@@ -855,21 +858,55 @@ and should be popped and added to the argument list.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_tokenizeKeyword">
-        tokenizeKeyword()
-        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeKeyword" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_tokenizeLambdaArgument">
+        tokenizeLambdaArgument()
+        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeLambdaArgument" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">537</span>
+    <span class="phpdocumentor-element-found-in__line">565</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Tokenize a registered literal keyword</p>
+        <p class="phpdocumentor-summary">Tokenize the lambda operator argument</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">tokenizeKeyword</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">tokenizeLambdaArgument</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_tokenizeLambdaProperty">
+        tokenizeLambdaProperty()
+        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeLambdaProperty" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">587</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Tokenize a lambda property</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">tokenizeLambdaProperty</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -896,7 +933,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">When you see a left paren, push it on the operator stack; no other operators can pop a paren (so it’s as if it has the lowest precedence).</p>
@@ -923,6 +960,40 @@ and should be popped and added to the argument list.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_tokenizeNavigationPropertyPath">
+        tokenizeNavigationPropertyPath()
+        <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeNavigationPropertyPath" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">540</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Tokenize a navigation property path</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">tokenizeNavigationPropertyPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_tokenizeNull">
         tokenizeNull()
         <a href="classes/Flat3-Lodata-Expression-Parser.html#method_tokenizeNull" class="headerlink"><i class="fas fa-link"></i></a>
@@ -930,7 +1001,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">381</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize literal null</p>
@@ -964,7 +1035,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">396</span>
+    <span class="phpdocumentor-element-found-in__line">399</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a number</p>
@@ -998,7 +1069,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">282</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">If we see an operator</p>
@@ -1032,7 +1103,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">212</span>
 </aside>
 
         <p class="phpdocumentor-summary">Then when you see a right paren, pop-and-apply any operators on the stack until you get back to a left paren, which is popped and discarded.</p>
@@ -1066,7 +1137,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">437</span>
+    <span class="phpdocumentor-element-found-in__line">440</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a single quoted string</p>
@@ -1100,7 +1171,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize spaces in the expression</p>
@@ -1134,7 +1205,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">557</span>
+    <span class="phpdocumentor-element-found-in__line">651</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a string</p>
@@ -1168,7 +1239,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">517</span>
+    <span class="phpdocumentor-element-found-in__line">520</span>
 </aside>
 
         <p class="phpdocumentor-summary">Tokenize a time of day</p>
@@ -1251,7 +1322,7 @@ and should be popped and added to the argument list.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Expression/Parser.php"><a href="files/src-expression-parser.html"><abbr title="src/Expression/Parser.php">Parser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">130</span>
+    <span class="phpdocumentor-element-found-in__line">113</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add the provided operator as an AST node</p>
