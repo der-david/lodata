@@ -104,6 +104,12 @@ class Metadata implements PipeInterface, EmitInterface
                     'Nullable',
                     Boolean::factory($property->isNullable())->toUrl()
                 );
+
+                $title = $property->getTitle();
+                if (!empty($title)) {
+                    $entityTypeProperty->addAttribute('sap:label', $title);
+                    $entityTypeProperty->addAttribute('sap:heading', $title);
+                }
             }
 
             // http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530365
