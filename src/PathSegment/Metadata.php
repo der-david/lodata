@@ -56,8 +56,10 @@ class Metadata implements PipeInterface, EmitInterface
      */
     public function emit(Transaction $transaction): void
     {
+        $sapNS = 'http://www.sap.com/Protocols/SAPData';
+
         // http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#sec_CSDLXMLDocument
-        $root = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData" />');
+        $root = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns:sap="' . $sapNS . '" />');
         $version = $transaction->getVersion();
         $root->addAttribute('Version', $version);
 
@@ -107,8 +109,8 @@ class Metadata implements PipeInterface, EmitInterface
 
                 $title = $property->getTitle();
                 if (!empty($title)) {
-                    $entityTypeProperty->addAttribute('sap:label', $title);
-                    $entityTypeProperty->addAttribute('sap:heading', $title);
+                    $entityTypeProperty->addAttribute('sap:label', $title, $sapNS);
+                    $entityTypeProperty->addAttribute('sap:heading', $title, $sapNS);
                 }
             }
 
