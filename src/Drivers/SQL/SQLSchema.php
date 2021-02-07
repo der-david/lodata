@@ -34,7 +34,6 @@ trait SQLSchema
         $manager = $connection->getDoctrineSchemaManager();
         $details = $manager->listTableDetails($this->getTable());
         $columns = $details->getColumns();
-        var_dump($columns);
         $casts = $this->getCasts();
 
         /** @var EntityType $type */
@@ -52,7 +51,7 @@ trait SQLSchema
                 new DeclaredProperty(
                     $column->getName(),
                     $this->sqlTypeToPrimitiveType($column->getType()->getName())
-                )
+                )->setTitle($column->getComment())
             );
         }
 
@@ -80,7 +79,7 @@ trait SQLSchema
                 new DeclaredProperty(
                     $name,
                     $this->sqlTypeToPrimitiveType($cast)->setNullable(!$notnull)
-                )
+                )->setTitle($column->getComment())
             );
         }
 
