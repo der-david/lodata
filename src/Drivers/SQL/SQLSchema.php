@@ -48,9 +48,11 @@ trait SQLSchema
             $column = $columns[$index->getColumns()[0]];
 
             $type->setKey(
-                new DeclaredProperty(
-                    $column->getName(),
-                    $this->sqlTypeToPrimitiveType($column->getType()->getName())
+                (
+                    new DeclaredProperty(
+                        $column->getName(),
+                        $this->sqlTypeToPrimitiveType($column->getType()->getName())
+                    )
                 )->setTitle($column->getComment())
             );
         }
@@ -76,9 +78,11 @@ trait SQLSchema
             }
 
             $type->addProperty(
-                new DeclaredProperty(
-                    $name,
-                    $this->sqlTypeToPrimitiveType($cast)->setNullable(!$notnull)
+                (
+                    new DeclaredProperty(
+                        $name,
+                        $this->sqlTypeToPrimitiveType($cast)->setNullable(!$notnull)
+                    )
                 )->setTitle($column->getComment())
             );
         }
