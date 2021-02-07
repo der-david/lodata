@@ -26,8 +26,25 @@ class Byte extends Primitive
         return (string) $this->value;
     }
 
-    public function toJson(): ?int
+    public function toJsonIeee754()
     {
+        return $this->toJson();
+    }
+
+    public function toJson()
+    {
+        if (null === $this->value) {
+            return null;
+        }
+
+        if (is_nan($this->value)) {
+            return 'NaN';
+        }
+
+        if (is_infinite($this->value)) {
+            return (($this->value < 0) ? '-' : '').'INF';
+        }
+
         return $this->value;
     }
 

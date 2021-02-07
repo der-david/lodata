@@ -10,7 +10,7 @@ use Flat3\Lodata\Exception\Protocol\BadRequestException;
  */
 class Version
 {
-    public const version = '4.01';
+    public const version = '4.0';
     public const minVersion = '4.0';
     public const versionHeader = 'odata-version';
     public const maxVersionHeader = 'odata-maxversion';

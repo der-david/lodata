@@ -34,6 +34,7 @@ trait SQLSchema
         $manager = $connection->getDoctrineSchemaManager();
         $details = $manager->listTableDetails($this->getTable());
         $columns = $details->getColumns();
+        var_dump($columns);
         $casts = $this->getCasts();
 
         /** @var EntityType $type */

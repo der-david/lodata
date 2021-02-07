@@ -115,6 +115,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model|Builder $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model();
 
@@ -129,6 +130,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model();
         return $model->getTable();
@@ -142,6 +144,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model();
         return $model->getCasts();
@@ -206,6 +209,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model();
 
@@ -265,6 +269,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $instance
+         * @phpstan-ignore-next-line
          */
         $instance = new $this->model();
         $builder = $instance->newQuery();
@@ -344,6 +349,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model();
         return $model->qualifyColumn($property->getName());
@@ -358,6 +364,7 @@ class EloquentEntitySet extends EntitySet implements ReadInterface, UpdateInterf
     {
         /**
          * @var Model $model
+         * @phpstan-ignore-next-line
          */
         $model = new $this->model;
 
